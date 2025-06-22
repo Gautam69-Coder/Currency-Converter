@@ -106,6 +106,68 @@ button.submit:hover {
     display: inline-block;
 }
 
+/* Smooth fade-in animation on body load */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply transitions to elements */
+.input input,
+select,
+button.submit,
+.output,
+.img1,
+.img2 {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on input */
+.input input:hover,
+select:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Click animation for button */
+button.submit:active {
+    transform: scale(0.95);
+}
+
+/* Slide-in for output */
+.output {
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .text {
