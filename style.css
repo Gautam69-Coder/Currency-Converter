@@ -1,0 +1,128 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Root Variables */
+:root {
+    --main-color: #4CAF50;
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --border-radius: 12px;
+}
+
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.text {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--main-color);
+    border-radius: var(--border-radius);
+    width: 250px;
+}
+
+button.submit {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit:hover {
+    background-color: #388E3C;
+}
+
+/* From & To Sections */
+.from, .to {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.from-country select,
+.to-country select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    min-width: 150px;
+}
+
+/* Flag Images */
+.img1, .img2 {
+    width: 40px;
+    height: 40px;
+}
+
+/* Exchange Rate Info */
+.exchange {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+/* Output Section */
+.output {
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .text {
+        width: 100%;
+    }
+
+    .from, .to {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .output {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    button.submit {
+        width: 100%;
+    }
+}
